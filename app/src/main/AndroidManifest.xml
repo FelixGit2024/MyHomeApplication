@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MyHomeApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Screen.VolumeKeysControl"
+            android:exported="false" />
+        <activity
             android:name=".Screen.TestScreenBrightness"
             android:exported="false" />
         <activity

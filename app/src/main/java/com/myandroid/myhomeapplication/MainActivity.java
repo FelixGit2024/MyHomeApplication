@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.myandroid.myhomeapplication.Screen.ScreenBrightness;
 import com.myandroid.myhomeapplication.Screen.TestScreenBrightness;
+import com.myandroid.myhomeapplication.Screen.VolumeKeysControl;
 import com.myandroid.myhomeapplication.adapt.TaskAdapt;
 import com.myandroid.myhomeapplication.model.TaskModel;
 
@@ -36,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<TaskModel> taskModels = new ArrayList<>();
         taskModels.add(new TaskModel("  1  ","屏幕亮度明暗变化"));
         taskModels.add(new TaskModel("1-test","循环改变屏幕亮度"));
-        taskModels.add(new TaskModel("  2  ","屏幕颜色轮换显示"));
         taskModels.add(new TaskModel("2-test","音量键控制图片切换"));
         TaskAdapt taskAdapt = new TaskAdapt(this, R.layout.activity_main_listitem, taskModels);
         listView.setAdapter(taskAdapt);
@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else if ("1-test".equals(taskModel.getId())) {
                     Intent intent = new Intent(MainActivity.this, TestScreenBrightness.class);
+                    startActivity(intent);
+                } else if ("2-test".equals(taskModel.getId())) {
+                    Intent intent = new Intent(MainActivity.this, VolumeKeysControl.class);
                     startActivity(intent);
                 }
             }
