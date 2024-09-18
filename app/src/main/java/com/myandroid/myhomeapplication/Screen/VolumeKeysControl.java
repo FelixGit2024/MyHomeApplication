@@ -42,7 +42,9 @@ public class VolumeKeysControl extends AppCompatActivity {
         }
 //        Toast.makeText(this, ""+index, Toast.LENGTH_SHORT).show();
         imageView.setImageResource(image[index]);
-        return super.onKeyDown(keyCode, event);
+        return true;// true会屏蔽音量键原有的功能  false保留原有功能同时实现这部分功能
+
+//        return super.onKeyDown(keyCode, event);
     }
 
     @Override

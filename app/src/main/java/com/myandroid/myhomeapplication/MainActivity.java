@@ -17,6 +17,8 @@ import com.myandroid.myhomeapplication.Screen.TestScreenBrightness;
 import com.myandroid.myhomeapplication.Screen.TouchImage;
 import com.myandroid.myhomeapplication.Screen.VolumeKeysControl;
 import com.myandroid.myhomeapplication.adapt.TaskAdapt;
+import com.myandroid.myhomeapplication.hardware.MyKeyEvent;
+import com.myandroid.myhomeapplication.hardware.MyVibrator;
 import com.myandroid.myhomeapplication.model.TaskModel;
 
 import java.util.ArrayList;
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         taskModels.add(new TaskModel("  2  ","循环改变屏幕亮度"));
         taskModels.add(new TaskModel("  3  ","音量键控制图片切换"));
         taskModels.add(new TaskModel("  4  ","手指拖动图片位置"));
+        taskModels.add(new TaskModel("  5  ","音量键控制文本框高亮"));
+        taskModels.add(new TaskModel("  6  ","振动器基本使用"));
         TaskAdapt taskAdapt = new TaskAdapt(this, R.layout.activity_main_listitem, taskModels);
         listView.setAdapter(taskAdapt);
 
@@ -58,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }else if ("  4  ".equals(taskModel.getId())) {
                     Intent intent = new Intent(MainActivity.this, TouchImage.class);
+                    startActivity(intent);
+                }else if ("  5  ".equals(taskModel.getId())) {
+                    Intent intent = new Intent(MainActivity.this, MyKeyEvent.class);
+                    startActivity(intent);
+                }else if ("  6  ".equals(taskModel.getId())) {
+                    Intent intent = new Intent(MainActivity.this, MyVibrator.class);
                     startActivity(intent);
                 }
             }
