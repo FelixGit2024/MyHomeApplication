@@ -1,9 +1,8 @@
-package com.myandroid.myhomeapplication.Screen;
+package com.myandroid.myhomeapplication.screen;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;

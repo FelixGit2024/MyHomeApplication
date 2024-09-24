@@ -1,4 +1,4 @@
-package com.myandroid.myhomeapplication.Screen;
+package com.myandroid.myhomeapplication.screen;
 
 import android.os.Bundle;
 import android.os.Handler;

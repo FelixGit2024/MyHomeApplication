@@ -1,4 +1,4 @@
-package com.myandroid.myhomeapplication.Screen;
+package com.myandroid.myhomeapplication.screen;
 
 import android.content.Intent;
 import android.os.Build;

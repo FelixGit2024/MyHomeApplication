@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
@@ -18,22 +20,25 @@
         android:theme="@style/Theme.MyHomeApplication"
         tools:targetApi="31">
         <activity
+            android:name=".audio.MyMediaRecorder"
+            android:exported="false" />
+        <activity
             android:name=".hardware.MyVibrator"
             android:exported="false" />
         <activity
             android:name=".hardware.MyKeyEvent"
             android:exported="false" />
         <activity
-            android:name=".Screen.TouchImage"
+            android:name=".screen.TouchImage"
             android:exported="false" />
         <activity
-            android:name=".Screen.VolumeKeysControl"
+            android:name=".screen.VolumeKeysControl"
             android:exported="false" />
         <activity
-            android:name=".Screen.TestScreenBrightness"
+            android:name=".screen.TestScreenBrightness"
             android:exported="false" />
         <activity
-            android:name=".Screen.ScreenBrightness"
+            android:name=".screen.ScreenBrightness"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
